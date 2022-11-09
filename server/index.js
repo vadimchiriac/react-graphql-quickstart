@@ -4,7 +4,7 @@ const { generate } = require("shortid");
 const typeDefs = `
   type Query {
     todos: [Todo]
-		todo(id: String!): Todo
+		todo(id: String, title: String): Todo
   }
 
 	type Todo {
@@ -23,15 +23,15 @@ const typeDefs = `
 `;
 
 let todos = [];
-todos.push({ id: generate(), title: "Our first item", completed: false });
+todos.push({ id: generate(), title: "Our first item", completed: true });
 
 const resolvers = {
   Query: {
     todos: () => {
       return todos;
     },
-    todo: (_, { _id }) => {
-      return todos.find((todo) => todo.id === _id);
+    todo: (_, { _id, title }) => {
+      return todos.find((todo) => todo.id === _id || todo.title === title);
     },
   },
   Mutation: {
