@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js localhost 4000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-datasource-rest": "^3.7.0",
+    "apollo-server": "^3.11.1",
+    "graphql": "^16.6.0",
+    "lru-cache": "^7.14.1",
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.20",
+    "shortid": "^2.2.16"
+  }
+}
