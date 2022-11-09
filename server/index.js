@@ -11,6 +11,8 @@ const typeDefs = `
 		id: String!
     title: String!
     completed: Boolean!
+    priority: String
+    dueDate: String
 	}
 
 	type Mutation {
