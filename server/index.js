@@ -1,5 +1,4 @@
 const { ApolloServer } = require("apollo-server");
-const LRU = require("lru-cache");
 const { generate } = require("shortid");
 
 const typeDefs = `
